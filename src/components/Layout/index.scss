@@ -37,8 +37,80 @@
     transform-style: preserve-3d;
     animation: fadeIn 1s forwards;
     animation-delay: 1s;
+}
 
+.about-page {
+    .text-zone {
+      position: absolute;
+      left: 10%;
+      top: 38%;
+      transform: translateY(-50%);
+      width: 35%;
+      vertical-align: middle;
+      display: table-cell;
+      max-height: 90%;
 
+      h1 { 
+          font-size: 55px; 
+          font-family: coolvetica;
+          color: #662323;
+          font-weight: 400;
+          margin-top: 0;
+          position: relative;
+          margin-bottom: 40px;
+          left: 10px;
 
+          &::before {
+              content: '<h1>';
+              font-family: 'La Belle Aurore';
+              font-size: 18px;
+              position: absolute;
+              margin-top: -10px;
+              left: -10px;
+              opacity: 0.6;
+              line-height: 18px;
+              color: #b6fc14;
+          }
+          
+          &::after {
+             content: '</h1>';
+             font-family: 'La Belle Aurore';
+             font-size: 18px;
+             line-height: 18px;
+             position: absolute;
+             left: -16px;
+             bottom: -20px;
+             opacity: 0.6;
+             color: #b6fc14;
+          }
+      }
 
+      p {
+          font-style: 13px;
+          color: #a3d8ff;
+          font-family: sans-serif;
+          font-weight: 300;
+          min-width: fit-content;
+          animation: pulse 1s;
+          font-size: 15px;
+
+          &:nth-of-type(1) {
+              animation-delay: 1.2s;
+          }
+
+          &:nth-of-type(2) {
+            animation-delay: 1.7s;
+        }
+
+        &:nth-of-type(3) {
+            animation-delay: 2.2s;
+        }
+      }
+    }
+
+    .text-animate-hover {
+      &:hover {
+        color: #026cff;
+      }  
+    }
 }
