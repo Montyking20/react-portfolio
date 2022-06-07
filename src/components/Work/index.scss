@@ -1,0 +1,113 @@
+#projects {
+    padding-top: 50px;
+    margin-left: 300px;
+    margin-right: 300px;
+  }
+  
+  h2 {
+    font-size: 20px;
+    color: var(--lime);
+  }
+  
+  .opacity {
+    transition: opacity 0.5s;
+    opacity: 50%;
+  }
+  
+  .opacity:hover,
+  .opacity:hover > .highlighted-project,
+  .opacity:hover > .other-projects-label {
+    cursor: pointer;
+    transition: opacity 0.5s;
+    opacity: 1;
+  }
+  
+  .other-projects-title {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 25px;
+  }
+  
+  .other-projects {
+    width: 300px;
+    aspect-ratio: 1/1;
+    opacity: 50%;
+    transition: 0.5s;
+    /* border: 2px solid var(--dark); */
+  }
+  
+  .other-projects-label {
+    margin: 0 auto;
+    width: 75%;
+    height: 25%;
+    background-color: var(--dark);
+    color: var(--white);
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+  
+    align-items: center;
+    text-decoration: none;
+    font-weight: 900;
+  }
+  
+  .project-1:hover > .label-1,
+  .project-2:hover > .label-2,
+  .project-3:hover > .label-3,
+    .project-4:hover > .label-4,
+    .project-5:hover > .label-5,
+    .project-6:hover > .label-6 {
+    margin-top: 12.5%;
+    font-size: 166%;
+    width: 75%;
+    height: 75%;
+    opacity: 0.95;
+    transition: 0.5s;
+  }
+  
+  .project-1 {
+    background-image: url("palabrav2.png");
+  }
+  
+  .project-2 {
+    background-image: url("weather-dashboard.png");
+  }
+  
+  .project-3 {
+    background-image: url("javascript_quiz.png");
+  }
+  
+  .project-4 {
+    background-image: url("day_planner.png");
+  }
+  
+  .project-5 {
+    background-image: url("noteTaker.png");
+  }
+  
+  .project-6 {
+    background-image: url("text_editor_pwa.png");
+  }
+  
+  .project-7 {
+    background-image: url("dadJokes.png");
+  }
+  
+  .project-1, .project-2, .project-3, .project-4, .project-5, .project-6 {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 30px;
+  }
+  
+  .project-carousel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-left: 100px;
+    margin-right: 100px;
+  }
