@@ -1,50 +1,65 @@
-import AnimatedLetters from '../AnimatedLetters'
+import React, { useEffect, useState } from 'react'
 import Loader from 'react-loaders'
-import { useEffect, useState } from 'react'
+import AnimatedLetters from '../AnimatedLetters'
 import './index.scss'
-
+import portfolioData from '../../data/portfolio.json'
 
 const Work = () => {
-    const [letterClass, setLetterClass] = useState('text-animate')
-    
+  const [letterClass, setLetterClass] = useState('text-animate')
+  console.log(portfolioData)
 
-    useEffect(() => {
-        const timeoutId = setTimeout(() => {
-            setLetterClass('text-animate-hover')
-        }, 2500)
-        
-        return () => {
-                    clearTimeout(timeoutId)
-                }
-    }, [])
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      setLetterClass('text-animate-hover')
+      }, 2500)
+     
+     return () => {
+          clearTimeout(timeoutId)
+        }
+ }, [])
 
+const renderWork = (work) => {
     return (
-        <>
-          <div className="container about-page">
-            <div className="text-zone">
-              <h1>
-                <AnimatedLetters
-                  letterClass={letterClass}
-                  strArray={['M', 'y', ' ', 'W', 'o', 'r ', 'k']}
-                  idx={15}
-                />  
-               </h1>
-        <div>
-        </div>
+      <div className='images-container'>
+          {
+            work.map((port, idx) => {
+              return (
+                  <div className="image-box" key={idx}>
+                      <img src={port.cover}
+                      className="work-image"
+                      alt="Portfolio" />
+                  <div className='content'>
+                      <p className='title'>{port.title}</p>
+                      <h4 className='description'>{port.description}</h4>
+                      <button
+                          className='btn'
+                          onClick={() => window.open(port.url)}
+                        >View</button>
+                      </div>
+                    </div>                 
+              )
+              })
+          }
       </div>
-      </div>
-      <div className="projectDivs">
-                <a href="https://palabra-2.herokuapp.com/" target="_blank" rel="noopener noreferrer">
-                    <div class="other-projects project-1 opacity">
-                        <div className="other-projects-label label-1">Palabra: Word of <br /> the Day App</div>
-                    </div>
-                </a>
-            </div>
-
-
-        <Loader type="pacman" />
-        </> 
     )
+}
+
+  return (
+    <>
+        <div className="container work-page">
+              <h1 className="page-title">
+                  <AnimatedLetters
+                      letterClass={letterClass}
+                      strArray={"My Work".split("")}
+                      idx={15} />  
+              </h1>
+              <div>{renderWork(portfolioData.portfolio)}</div>
+        </div>
+        <Loader type="pacman" />
+
+    </>
+  )
+
 }   
 
 
