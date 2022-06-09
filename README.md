@@ -13,5 +13,5 @@ The application is responsive and interactive.
 
 I will keep refactoring this application and updating it with information as I learn throughout my bootcamp.
 
-The application can be found here: https://github.com/Montyking20/react-portfolio
+The application can be found here: https://github.com/Montyking20/react-portfolio / https://montyking20.github.io/react-portfolio/
 
