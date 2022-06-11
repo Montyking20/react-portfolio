@@ -1,31 +1,31 @@
 {
     "portfolio": [
         {
-          "cover": "/portfolio/project/Screenshot-PG.png",
+          "cover": "/portfolio/images/Screenshot-PG.png",
           "title": "PasswordGen",
           "description": "Class assignment to generate a password when prompted. HTML, CSS, JS",
           "url": "https://montyking20.github.io/password/"
         },
         {
-          "cover": "/portfolio/project/Screenshot-TT.png",
+          "cover": "./portfolio/images/Screenshot-TT.png",
           "title": "TrainingTracker",
           "description": "An app used to track emplyees training. JS, CSS",
           "url": "https://montyking20.github.io/training-tracker/"
         },
         {
-          "cover": "/portfolio/project/Screenshot-WD.png",
+          "cover": "./portfolio/images/Screenshot-WD.png",
           "title": "WeatherDash",
           "description": "A weather dashboard that provides weather for where searched. HTML, CSS, JS",
           "url": "https://montyking20.github.io/weather-dashboard/"
         },
         {
-          "cover": "./portfolio/project/react.png",
+          "cover": "./portfolio/images/react.png",
           "title": "holder",
           "description": "holding spot",
           "url": "https://montyking20.github.io/password/"
         },
         {
-          "cover": "/portfolio/project/monitors.png",
+          "cover": "./portfolio/images/monitors.png",
           "title": "holder",
           "description": "holding spot",
           "url": "https://montyking20.github.io/password/"
